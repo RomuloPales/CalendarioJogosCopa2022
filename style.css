@@ -77,12 +77,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-}
-.card ul li + li {
   padding-top: 24px;
   border-top: 1px solid #323238;
+  
 }
+
 
 .card ul li strong {
   font-weight: 900;
@@ -93,13 +92,16 @@ header {
  h1{
  color: #f7dd43;
  font-size: 18px;
+ text-transform: capitalize;
 }
 .foot{
-  background-color: ;
+  
   display: flex;
   justify-content: space-between;
 }
 h3{
   font-size: 20px;
   color: #f6f6f6;
+  text-transform: capitalize;
+
 }
