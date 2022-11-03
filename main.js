@@ -10,18 +10,20 @@ function listGames(time1, hour, time2) {
                <h1> ${time1} </h1>  
                 <h3> X </h3>
                 <h1>${time2}</h1></div>
-            `;
+            `
 }
 
+let delay = -0.2;
 function criarCard(date, day, games) {
+  delay += 0.2;
   return `
-    <div class="card">
+    <div class="card" style="animation-delay: ${delay}s">
      <h2>${date} <span>${day}</span></h2>
      <ul>
      ${games} 
      </ul>
     </div>
-    `;
+    `
 }
 
 document.querySelector("#app").innerHTML = `

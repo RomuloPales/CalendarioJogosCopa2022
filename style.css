@@ -8,12 +8,33 @@ ul {
   list-style: none;
 }
 
+:root{
+
+  --card-title-border-color:#f7dd43;
+  --card-color-primary :#746615;
+  --background-image-body : url(./assets/bgyellow.svg);
+  --card-bg-collor:#1d1c19;
+}
+body.blue{
+
+  --card-title-border-color:#338af3;
+  --card-color-primary :#338af3;
+  --background-image-body : url(./assets/bgBlue.svg);
+  --card-bg-collor:#202024;
+}
+body.green{
+  --card-title-border-color:#047C3F;
+  --card-color-primary :#047C3F;
+  --background-image-body : url(./assets/bggrren.svg);
+  --card-bg-collor:#1A1F1B;
+}
+
 body {
   background-color: #121214;
-  background-image: url(./assets/bgBlue.svg);
-  background-position-x: center;
-  background-position-y: -715px;
+  background-image: var(--background-image-body);
+  background-position: top center ;  
   font-family: "Roboto", sans-serif;
+   
 }
 .logo {
   background-color: ;
@@ -23,7 +44,8 @@ body {
 
 #app {
   width: fit-content;
-  margin: 52px auto;
+  margin: auto;
+  padding-top: 52px;
 }
 header {
   margin-bottom: 63px;
@@ -37,8 +59,8 @@ header {
 }
 .card {
   text-align: center;
-  background: #1d1c19;
-  border-bottom: 2px solid #f7dd43;
+  background: var(--card-bg-collor);
+  border-bottom: 2px solid var(--card-title-border-color);
   border-radius: 6px;
   padding: 32px 23px;
 }
@@ -52,7 +74,7 @@ header {
   align-items: center;
   gap: 16px;
   padding: 8px 16px;
-  border: 1px solid #746615;
+  border: 1px solid var(--card-color-primary) ;
   border-radius: 6px;
   width: fit-content;
   margin-inline: auto;
@@ -90,7 +112,7 @@ header {
   color: #e1e1e6;
 }
  h1{
- color: #f7dd43;
+ color: #f6f6f6;
  font-size: 18px;
  text-transform: capitalize;
 }
@@ -103,5 +125,46 @@ h3{
   font-size: 20px;
   color: #f6f6f6;
   text-transform: capitalize;
+}
+
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover,
+.foot h1:hover,
+.foot h3:hover{
+
+  transform:scale(1.1)
+}
+.card h2,
+.card ul li strong,
+.card ul li img,
+.foot h1,
+.foot h3{
+
+  transition: transform 0.3s;
+}
+
+.card{
+  opacity: 0;
+  animation: appear .2s forwards;
+  }
+
+@keyframes appear{
+  0%{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@media(min-width : 700px){
+  #cards{
+    max-width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
 }
