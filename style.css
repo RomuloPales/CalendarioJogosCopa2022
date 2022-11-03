@@ -19,13 +19,13 @@ body.blue{
 
   --card-title-border-color:#338af3;
   --card-color-primary :#338af3;
-  --background-image-body : url(./assets/bgBlue.svg);
+  --background-image-body : url(./assets/bgblue.svg);
   --card-bg-collor:#202024;
 }
 body.green{
   --card-title-border-color:#047C3F;
   --card-color-primary :#047C3F;
-  --background-image-body : url(./assets/bggrren.svg);
+  --background-image-body : url(./assets/bggreen.svg);
   --card-bg-collor:#1A1F1B;
 }
 
@@ -34,6 +34,8 @@ body {
   background-image: var(--background-image-body);
   background-position: top center ;  
   font-family: "Roboto", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
    
 }
 .logo {
