@@ -13,6 +13,21 @@ function listGames(time1, hour, time2) {
             `
 }
 
+function corNova(){
+  document.querySelector("body").classList.remove("green")
+  document.querySelector("body").classList.add("blue")
+  console.log(body)
+}
+function corNova2(){
+  document.querySelector("body").classList.remove("blue")
+  document.querySelector("body").classList.add("green")
+}
+function corPadrao(){
+  document.querySelector("body").classList.remove("green")
+  document.querySelector("body").classList.remove("blue")
+  
+}
+
 let delay = -0.2;
 function criarCard(date, day, games) {
   delay += 0.2;
@@ -29,6 +44,9 @@ function criarCard(date, day, games) {
 document.querySelector("#app").innerHTML = `
 <header>
     <img class="logo" src="./assets/logo.svg" alt="logoNlw">
+    <button class="padrao" onclick="corPadrao()"></button>  
+    <button class="verde" onclick="corNova2()"></button>  
+    <button class="azul" onclick="corNova()"></button>
 </header>
 <main id="cards">
     ${criarCard("20/11", "Domingo", listGames("qatar", "13:00", "ecuador"))}

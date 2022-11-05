@@ -36,7 +36,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-repeat: no-repeat;
   background-size: 100%;
-   
+    
 }
 .logo {
   background-color: ;
@@ -52,6 +52,8 @@ body {
 header {
   margin-bottom: 63px;
   text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 #cards{
   display: flex;
@@ -149,6 +151,21 @@ h3{
 .card{
   opacity: 0;
   animation: appear .2s forwards;
+  }
+  button.azul{
+    background-color: blue;
+    height: 20px;
+    width: 20px;
+  }
+  button.padrao{    
+    background-color: #f7dd43;
+    height: 20px;
+    width: 20px
+  }
+  button.verde{
+    background-color: #047C3F;
+    height: 20px;
+    width: 20px
   }
 
 @keyframes appear{
